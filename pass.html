@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html>
- <head>
-     <title>Assignment_06</title>
- </head>
+
+<head>
+    <title>Assignment_06</title>
+</head>
+
 <body>
-<h2>Pass phrase by Sanhith Gouravelly</h2>
-<form>
-    <input type="button" onclick="processPhrase()" value="Check the phrase">
-</form>
+    <h2>Pass phrase by Sanhith Gouravelly</h2>
+    <form>
+        <input type="button" onclick="processPhrase()" value="Check the phrase">
+    </form>
 
 
-<p id="result">This text will be replaced </p>
+    <p id="result">This text will be replaced </p>
     <label for="form1_phrase">Enter the secret phrase </label>
-    <input type ="password" id="form1_phrase" name="form1_phrase" step=2 value="Let me in">
-     <br><br/>
+    <input type="password" id="form1_phrase" name="form1_phrase" step=2 value="Let me in">
+    <br><br />
     <label for="form1_check">Enter a phrase </label>
-    <input type ="text" id="form1_check" name="form1_check" autofocus> <br>
-     <br/>
+    <input type="text" id="form1_check" name="form1_check" autofocus> <br>
+    <br />
 
-<script> 
-let correct = 0, wrong = 0;
-function processPhrase(){
-    console.log("Getting form values")
-    secretphrase = document.getElementById("form1_phrase").value
-    phrase = document.getElementById("form1_check").value
-    out = document.getElementById("result")
-    if(secretphrase === phrase){
-        correct = correct + 1;
-        out.innerHTML = "correct count: "+correct
-        alert("Access allowed");
-    } else {
-        wrong = wrong + 1;
-        out.innerHTML = "wrong count: "+wrong
-        alert("Access denied");
-    }
-}
-else
-                out.innerHTML="please confirm"
-                while (wrong>=4) {
-                    alert("Account locked");                }
-                
-                
+    <script>
+        let correct = 0, wrong = 0;
+        function processPhrase() {
+            console.log("Getting form values")
+            secretphrase = document.getElementById("form1_phrase").value
+            phrase = document.getElementById("form1_check").value
+            confirmed=confirm("DO you want to continue with phrase:"+C)
+            out = document.getElementById("result")
+
+            if(confirmed){
+        if (secretphrase === phrase) {
+                correct = correct + 1;
+                out.innerHTML = "correct count: " + correct
+                alert("Access allowed");
+            } else {
+                wrong = wrong + 1;
+                out.innerHTML = "wrong count: " + wrong
+                alert("Access denied");
             }
-        
- </script>
-        <div class="container">
-            <p>GUESS</p>
-            <img id="demo" src="" alt="Guess!!!" width="200px" height="200px" onclick="newImage()" >
+            }
+            else{
+                out.innerHTML = "please confirm"
+                while (wrong >= 4) 
+                    alert("Account locked");
+                
+
+                }
+        }
+
             
-        </div>
-        <p id="result1"></p>
-        <script>
+                
+            
+            
+
+     
+
+               
+        
+
+
+    </script>
+    <div class="container">
+        <p>GUESS</p>
+        <img id="demo" src="" alt="Guess!!!" width="200px" height="200px" onclick="newImage()">
+
+    </div>
+    <p id="result1"></p>
+    <script>
             var usingImage = 1;
             out = document.getElementById("result1")
             function newImage() {
@@ -58,22 +75,22 @@ else
                 switch (usingImage) {
                     case 1:
                         document.getElementById("demo").src = "antelope.jpg"
-                      
+
 
                         break
                     case 2:
                         document.getElementById("demo").src = "germanshepard.jpg"
-                        
-                       ;
+
+                            ;
                         break
                     case 3:
                         document.getElementById("demo").src = "rabbit.jpg"
-                      
+
                         break
-                    }
-                    usingImage=usingImage+1
+                }
+                usingImage = usingImage + 1
             }
-        </script>
+    </script>
 
 
 
