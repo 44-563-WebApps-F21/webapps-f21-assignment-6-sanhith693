@@ -35,6 +35,48 @@ function processPhrase(){
         alert("Access denied");
     }
 }
-</script>
+else
+                out.innerHTML="please confirm"
+                while (wrong>=4) {
+                    alert("Account locked");                }
+                
+                
+            }
+        
+ </script>
+        <div class="container">
+            <p>GUESS</p>
+            <img id="demo" src="" alt="Guess!!!" width="200px" height="200px" onclick="newImage()" >
+            
+        </div>
+        <p id="result1"></p>
+        <script>
+            var usingImage = 1;
+            out = document.getElementById("result1")
+            function newImage() {
+
+                switch (usingImage) {
+                    case 1:
+                        document.getElementById("demo").src = "antelope.jpg"
+                      
+
+                        break
+                    case 2:
+                        document.getElementById("demo").src = "germanshepard.jpg"
+                        
+                       ;
+                        break
+                    case 3:
+                        document.getElementById("demo").src = "rabbit.jpg"
+                      
+                        break
+                    }
+                    usingImage=usingImage+1
+            }
+        </script>
+
+
+
 </body>
+
 </html>
